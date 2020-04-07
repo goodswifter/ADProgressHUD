@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ADProgressHUD_Example' do
+  pod 'ADProgressHUD', :path => '../'
+
+  target 'ADProgressHUD_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
