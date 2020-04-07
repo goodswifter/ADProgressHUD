@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07B951060BFA38D04B76314A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		07B951060BFA38D04B76314A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1F91A2C71CB00677E6A79353 /* Pods-ADProgressHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADProgressHUD_Example.release.xcconfig"; path = "Target Support Files/Pods-ADProgressHUD_Example/Pods-ADProgressHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2B2E1B4EA576EF9112A845FC /* Pods-ADProgressHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADProgressHUD_Tests.release.xcconfig"; path = "Target Support Files/Pods-ADProgressHUD_Tests/Pods-ADProgressHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4F4CF0880673AA2D9B81BE6B /* Pods-ADProgressHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADProgressHUD_Example.debug.xcconfig"; path = "Target Support Files/Pods-ADProgressHUD_Example/Pods-ADProgressHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,8 +59,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB0D102A88F56B280829FEB4 /* Pods_ADProgressHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ADProgressHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E409882E67F103776B70D00E /* ADProgressHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ADProgressHUD.podspec; path = ../ADProgressHUD.podspec; sourceTree = "<group>"; };
-		E803F175CB0AF8EC7B4DFB4D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E409882E67F103776B70D00E /* ADProgressHUD.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ADProgressHUD.podspec; path = ../ADProgressHUD.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E803F175CB0AF8EC7B4DFB4D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		FC8F76AC2F6ED237DA3AB3FE /* Pods-ADProgressHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ADProgressHUD_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ADProgressHUD_Tests/Pods-ADProgressHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +111,6 @@
 				FC8F76AC2F6ED237DA3AB3FE /* Pods-ADProgressHUD_Tests.debug.xcconfig */,
 				2B2E1B4EA576EF9112A845FC /* Pods-ADProgressHUD_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -285,10 +284,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ADProgressHUD_Example/Pods-ADProgressHUD_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ADProgressHUD/ADProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ADProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

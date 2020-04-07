@@ -1,15 +1,22 @@
 PODS:
-  - ADProgressHUD (0.1.0)
+  - ADProgressHUD (0.1.0):
+    - MBProgressHUD
+  - MBProgressHUD (1.2.0)
 
 DEPENDENCIES:
   - ADProgressHUD (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
 
 EXTERNAL SOURCES:
   ADProgressHUD:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADProgressHUD: c911872ab4825e355f08f1e976de672788dd18a2
+  ADProgressHUD: b0cc6b6b9fdf9c7e5cc5e9917859a5f41b7ec0c4
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
 PODFILE CHECKSUM: e8937f8fa7a659d4ff67de2298fe101a632c0441
 
