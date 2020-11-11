@@ -37,8 +37,8 @@ static CGFloat secondPerText = 0.16;
 }
 
 + (void)showActivityMessage:(NSString *)message view:(UIView *)view {
-    if (view == nil)
-        view = [self keyWindow];
+    [self hideHUDForView:view];
+    
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = message;
@@ -99,8 +99,7 @@ static CGFloat secondPerText = 0.16;
 }
 
 + (void)hideHUDForView:(UIView * _Nullable)view {
-    if (view == nil)
-        view = [self keyWindow];
+    if (view == nil) view = [self keyWindow];
     
     [MBProgressHUD hideHUDForView:view animated:YES];
 }
@@ -111,8 +110,6 @@ static CGFloat secondPerText = 0.16;
 /// @param icon 图标
 /// @param view 显示的视图
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view {
-    if (view == nil)
-        view = [self keyWindow];
     // 隐藏之前的HUD
     [self hideHUDForView:view];
     // 快速显示一个提示信息
