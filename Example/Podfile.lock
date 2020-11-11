@@ -1,5 +1,5 @@
 PODS:
-  - ADProgressHUD (0.1.4):
+  - ADProgressHUD (0.1.5):
     - MBProgressHUD
   - MBProgressHUD (1.2.0)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADProgressHUD: f33adff2e4ce66fc42b28ba73d6a0ece432cdc80
+  ADProgressHUD: 509f7eebb5a81888068a863863b12ef53ef1bf2a
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
 
 PODFILE CHECKSUM: e8937f8fa7a659d4ff67de2298fe101a632c0441

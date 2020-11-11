@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ADProgressHUD : NSObject
 
 #pragma mark - 在指定的view上显示HUD
++ (void)showHUDToView:(UIView * _Nullable)view;
 /// 显示提示消息
 + (void)showMessage:(NSString *)message toView:(UIView * _Nullable)view;
 /// 显示成功消息

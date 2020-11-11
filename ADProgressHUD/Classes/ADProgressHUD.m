@@ -16,6 +16,10 @@ static CGFloat secondPerText = 0.16;
 
 #pragma mark - Public Function
 #pragma mark - 在指定的view上显示hud
++ (void)showHUDToView:(UIView *)view {
+    [self showActivityMessage:@"" toView:view];
+}
+
 /// 显示提示消息
 + (void)showMessage:(NSString *)message toView:(UIView * _Nullable)view {
     [self show:message icon:nil view:view];
