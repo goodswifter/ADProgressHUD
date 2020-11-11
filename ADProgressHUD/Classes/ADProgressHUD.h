@@ -21,7 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 显示警告消息
 + (void)showWarning:(NSString *)warning toView:(UIView * _Nullable)view;
 /// 显示菊花 + 消息
-+ (void)showActivityMessage:(NSString*)message view:(UIView * _Nullable)view;
++ (void)showActivityMessage:(NSString*)message toView:(UIView * _Nullable)view;
+/// 在底部显示提示消息
++ (void)showBottomMessage:(NSString *)message toView:(UIView * _Nullable)view;
 
 #pragma mark - 在window上显示HUD
 + (void)showHUD;

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'ADProgressHUD'
-    s.version          = '0.1.3'
+    s.version          = '0.1.4'
     s.summary          = 'ADProgressHUD.'
     s.description      = 'ADProgressHUD description'
     s.homepage         = 'https://github.com/goodswifter/ADProgressHUD'
