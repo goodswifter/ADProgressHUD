@@ -16,9 +16,9 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
-### ios JSManagerLibLane
+### ios ADManagerLibLane
 ```
-fastlane ios JSManagerLibLane
+fastlane ios ADManagerLibLane
 ```
 自动发布Pods版本
 
