@@ -42,7 +42,6 @@
 
 - (void)dealloc {
     NSLog(@"%@", self.greenView);
-//    [ADProgressHUD hideHUDForView:self.greenView];
 }
 
 @end
