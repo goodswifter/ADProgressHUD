@@ -19,15 +19,16 @@ NS_ASSUME_NONNULL_BEGIN
 /// 显示失败消息
 + (void)showError:(NSString *)error toView:(UIView * _Nullable)view;
 /// 显示警告消息
-+ (void)showWarning:(NSString *)Warning toView:(UIView *  _Nullable)view;
++ (void)showWarning:(NSString *)warning toView:(UIView * _Nullable)view;
 /// 显示菊花 + 消息
 + (void)showActivityMessage:(NSString*)message view:(UIView * _Nullable)view;
 
 #pragma mark - 在window上显示HUD
++ (void)showHUD;
 + (void)showMessage:(NSString *)message;
 + (void)showSuccess:(NSString *)success;
 + (void)showError:(NSString *)error;
-+ (void)showWarning:(NSString *)Warning;
++ (void)showWarning:(NSString *)warning;
 + (void)showMessageWithImageName:(NSString *)imageName message:(NSString *)message;
 + (void)showActivityMessage:(NSString *)message;
 /// 在底部显示提示消息

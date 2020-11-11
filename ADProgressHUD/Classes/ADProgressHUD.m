@@ -32,8 +32,8 @@ static CGFloat secondPerText = 0.16;
 }
 
 /// 显示警告消息
-+ (void)showWarning:(NSString *)Warning toView:(UIView *  _Nullable)view {
-    [self show:Warning icon:@"warning" view:view];
++ (void)showWarning:(NSString *)warning toView:(UIView * _Nullable)view {
+    [self show:warning icon:@"warning" view:view];
 }
 
 + (void)showActivityMessage:(NSString *)message view:(UIView *)view {
@@ -44,12 +44,17 @@ static CGFloat secondPerText = 0.16;
     hud.label.text = message;
     // 再设置模式
     hud.mode = MBProgressHUDModeIndeterminate;
+    hud.backgroundView.style = MBProgressHUDBackgroundStyleSolidColor;
     
     // 隐藏时候从父控件中移除
     hud.removeFromSuperViewOnHide = YES;
 }
 
 #pragma mark - 在window上显示hud
++ (void)showHUD {
+    [self showActivityMessage:@""];
+}
+
 + (void)showMessage:(NSString *)message {
     [self showMessage:message toView:nil];
 }
@@ -62,8 +67,8 @@ static CGFloat secondPerText = 0.16;
     [self showError:error toView:nil];
 }
 
-+ (void)showWarning:(NSString *)Warning {
-    [self showWarning:Warning toView:nil];
++ (void)showWarning:(NSString *)warning {
+    [self showWarning:warning toView:nil];
 }
 
 + (void)showMessageWithImageName:(NSString *)imageName message:(NSString *)message {
@@ -106,10 +111,10 @@ static CGFloat secondPerText = 0.16;
 /// @param icon 图标
 /// @param view 显示的视图
 + (void)show:(NSString *)text icon:(NSString *)icon view:(UIView *)view {
-    // 隐藏之前的HUD
-    [self hideHUD];
     if (view == nil)
         view = [self keyWindow];
+    // 隐藏之前的HUD
+    [self hideHUDForView:view];
     // 快速显示一个提示信息
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:view animated:YES];
     hud.label.text = text;

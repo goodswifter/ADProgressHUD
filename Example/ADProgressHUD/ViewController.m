@@ -22,18 +22,29 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    [MBProgressHUD showActivityMessage:@"正在加载中..." view:self.greenView];
-    [ADProgressHUD showActivityMessage:@"正在加载中..."];
+//    [ADProgressHUD showActivityMessage:@"正在加载中..." view:self.greenView];
+//    [ADProgressHUD showActivityMessage:@""];
+//    [ADProgressHUD showActivityMessage:@"正在加载中..."];
 //    [ADProgressHUD showMessage:@"哈哈"];
-//    [MBProgressHUD showMessage:@"哈哈撒旦法是的发生的发生的发说说阿什顿发 阿什顿发阿诗丹顿发哈哈撒旦法是的发生的发生的发说说阿什顿发 阿什顿发阿诗丹顿发哈哈撒旦法是的发生的发生的发说说阿什顿发 阿什顿发阿诗丹顿发"];
+    [ADProgressHUD showHUD];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
             [ADProgressHUD hideHUD];
-//            [MBProgressHUD hideHUDForView:self.greenView];
-            [ADProgressHUD showSuccess:@"请求成功"];
+//            [ADProgressHUD showSuccess:@"请求成功了"];
+//            [ADProgressHUD showMessage:@"请求成功" toView:self.greenView];
+//            [ADProgressHUD showSuccess:@"请求成功" toView:self.view];
         });
     });
+}
+
+- (IBAction)test:(id)sender {
+    NSLog(@"%s", __func__);
+}
+
+- (void)dealloc {
+    NSLog(@"%@", self.greenView);
+//    [ADProgressHUD hideHUDForView:self.greenView];
 }
 
 @end
