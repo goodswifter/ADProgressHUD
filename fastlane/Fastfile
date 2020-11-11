@@ -5,7 +5,7 @@ platform :ios do
 	# 创建航道
 	# 使用航道 : fastlane ADManagerLibLane tag: target: commit:
 	desc "自动发布Pods版本"
-	lane :JSManagerLibLane do |options|
+	lane :ADManagerLibLane do |options|
 
 		# 参数
 		tagName = options[:tag]

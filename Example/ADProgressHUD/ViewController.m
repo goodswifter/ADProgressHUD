@@ -11,7 +11,6 @@
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *greenView;
-
 @end
 
 @implementation ViewController
