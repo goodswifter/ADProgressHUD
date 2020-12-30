@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'ADProgressHUD'
-    s.version          = '0.1.5'
+    s.version          = '0.1.6'
     s.summary          = 'ADProgressHUD.'
     s.description      = 'ADProgressHUD description'
     s.homepage         = 'https://github.com/goodswifter/ADProgressHUD'
@@ -9,8 +9,6 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/goodswifter/ADProgressHUD.git', :tag => s.version.to_s }
     s.ios.deployment_target = '9.0'
     s.source_files = 'ADProgressHUD/Classes/**/*'
-    s.resource_bundles = {
-     'ADProgressHUD' => ['ADProgressHUD/Assets/*.png']
-    }
+    s.resource = 'ADProgressHUD/Assets/ADProgressHUD.bundle'
     s.dependency 'MBProgressHUD'
 end

@@ -72,6 +72,7 @@ static CGFloat secondPerText = 0.16;
 
 #pragma mark - 在window上显示hud
 + (void)showHUD {
+    NSLog(@"`1```");
     [self showActivityMessage:@""];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <ADProgressHUD.h>
+#import <ADProgressHUD/ADProgressHUD.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIView *greenView;
@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -25,6 +26,7 @@
 //    [ADProgressHUD showActivityMessage:@"正在加载中..."];
 //    [ADProgressHUD showMessage:@"哈哈"];
     [ADProgressHUD showHUD];
+//    [ADProgressHUD showActivityMessage:@"哈哈" toView:nil];
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -37,6 +39,7 @@
 }
 
 - (IBAction)test:(id)sender {
+    [ADProgressHUD showSuccess:@"哈哈"];
     NSLog(@"%s", __func__);
 }
 
